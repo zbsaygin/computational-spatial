@@ -32,7 +32,7 @@ The script ships this as a demo behind a flag (`RUN_ITERATION_DEMO`, default `fa
 
 So switch to Newton — it has quadratic convergence near a root and doesn't care about contraction properties. Done, right?
 
-Not quite. The bracketed terms in eq (16) carry powers up to $A^{\sigma-1} = A^4$ and $H^{(\sigma-1)^2(1-\alpha)/(\alpha(2\sigma-1))} \approx H^{1.78}$. From the initial guess $x_0 = \log L$, pure Newton's local quadratic model is way too aggressive — the solver bails with `retcode = :Unstable` and a residual on the order of $10^3$.
+Not quite. The bracketed terms in eq (16) carry powers up to $A^{\sigma-1} = A^4$ and $H^{(\sigma-1)^2(1-\alpha)/(\alpha(2\sigma-1))} \approx H^{1.78}$. From the initial guess $x_0 = \log L$, pure Newton's local quadratic model is too aggressive — the solver fails with `retcode = :Unstable` and a residual on the order of $10^3$.
 
 I tried four solvers from `NonlinearSolve.jl` on the same problem:
 
@@ -64,7 +64,7 @@ To override, edit the keyword args to `build_params(...)`. Note that RRH show th
 
 ## A note on the data
 
-The "data" here is `rand(N) .+ 0.5` — synthetic, just so the script runs end-to-end.
+The "data" here is `rand(N) .+ 0.5` — synthetic; the script is a self-contained demo.
 
 ## References
 
