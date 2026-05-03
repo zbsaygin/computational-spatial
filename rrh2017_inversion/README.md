@@ -59,8 +59,6 @@ The script defaults to `TrustRegion`. The trust-region globalization adapts each
 julia --project=. redding_rossihansberg_2017_inversion.jl
 ```
 
-(The first run instantiates the pinned manifest, which takes a minute. Subsequent runs are fast.)
-
 ## Outputs
 
 - `figures/inversion/A_grid.png`, `figures/inversion/H_grid.png` — recovered productivity and housing supply
