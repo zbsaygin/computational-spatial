@@ -27,8 +27,6 @@ cd rrh2017_inversion
 julia --project=. redding_rossihansberg_2017_inversion.jl
 ```
 
-First run is slow because Julia precompiles dependencies. After that it's fast.
-
 ## References
 
 - Allen, T. & Arkolakis, C. (2014). "Trade and the Topography of the Spatial Economy." *Quarterly Journal of Economics* 129(3): 1085–1140.
