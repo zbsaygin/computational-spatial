@@ -79,7 +79,7 @@ To override, edit the keyword args to `build_params(...)`. Note that RRH show th
 
 ## A note on the data
 
-The "data" here is `rand(N) .+ 0.5` — synthetic, just so the script runs end-to-end. The heatmaps look like noise because the inputs are noise. Plug in real population and wage data for an actual inversion exercise.
+The "data" here is `rand(N) .+ 0.5` — synthetic, just so the script runs end-to-end. The heatmaps look like noise because the inputs are noise.
 
 ## References
 
