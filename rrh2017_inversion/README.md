@@ -1,8 +1,8 @@
 # QSE Inversion
 
-I wrote this for a TA section on spatial economics at Chicago and cleaned it up afterward. It implements the model-inversion procedure that Redding & Rossi-Hansberg (2017) describe in §3.5–3.6 of their *Annual Review* survey, building on Helpman (1998) and the existence/uniqueness machinery from Allen & Arkolakis (2014).
+A Julia implementation of the model-inversion procedure that Redding & Rossi-Hansberg (2017) describe in §3.5–3.6 of their *Annual Review* survey, building on Helpman (1998) and the existence/uniqueness machinery from Allen & Arkolakis (2014). I wrote it for a TA section on spatial economics at Chicago.
 
-The slide deck for the same TA session walks through the theory at a slower pace: [`../slides/01_model_inversion.pdf`](../slides/01_model_inversion.pdf).
+The companion slide deck covers the underlying theory: [`../slides/01_model_inversion.pdf`](../slides/01_model_inversion.pdf).
 
 ## The setup
 
