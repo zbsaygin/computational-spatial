@@ -20,13 +20,6 @@ A series of five decks. They walk from the basic model-inversion problem up thro
 |---|---|---|
 | [`rrh2017_inversion/`](./rrh2017_inversion) | 01 | Solves equations (16)–(17) of RRH (2017) for productivity $A$ and housing supply $H$ using `NonlinearSolve.jl`. Includes a derivation of why naive iteration on equation (16) diverges — spectral-radius argument, $\lambda_1 = -(3\sigma-1)/(\sigma-1) > 1$ — and which solvers actually converge. |
 
-Each code subfolder ships with its own pinned environment:
-
-```bash
-cd rrh2017_inversion
-julia --project=. redding_rossihansberg_2017_inversion.jl
-```
-
 ## References
 
 - Allen, T. & Arkolakis, C. (2014). "Trade and the Topography of the Spatial Economy." *Quarterly Journal of Economics* 129(3): 1085–1140.
