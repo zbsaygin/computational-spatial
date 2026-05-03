@@ -45,8 +45,6 @@ I tried four solvers from `NonlinearSolve.jl` on the same problem:
 
 The script defaults to `TrustRegion`. Trust-region globalization adapts each step's length based on actual-vs-predicted reduction, which is what saves you when the pure quadratic model is misleading. Deck 03 ([`../slides/03_numerical_methods.pdf`](../slides/03_numerical_methods.pdf)) covers the broader theory of solvers and globalization strategies.
 
-(Embarrassing footnote: my first version of this script just ran `NewtonRaphson()` and used the result without checking `sol.retcode`. The heatmaps looked plausible because the input data was random — random in, random out. Adding `@assert sol.retcode == ReturnCode.Success` and an `@show maximum(abs, eq16(A, p))` is what finally surfaced this.)
-
 ## Outputs
 
 - `figures/inversion/A_grid.png`, `figures/inversion/H_grid.png` — recovered productivity and housing supply
@@ -66,7 +64,7 @@ To override, edit the keyword args to `build_params(...)`. Note that RRH show th
 
 ## A note on the data
 
-The "data" here is `rand(N) .+ 0.5` — synthetic, just so the script runs end-to-end. The heatmaps look like noise because the inputs are noise.
+The "data" here is `rand(N) .+ 0.5` — synthetic, just so the script runs end-to-end.
 
 ## References
 
