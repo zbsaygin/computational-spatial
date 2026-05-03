@@ -22,15 +22,9 @@ That's the system the script solves with `NonlinearSolve.jl`. I work in log-coor
 
 ## Attempt 1: fixed-point iteration
 
-The first thing you'd try is to rearrange eq (16) for $A$, treat the rearrangement as a map $T(A)$, and just iterate. **It diverges.** And it's not a fluke — there's a clean reason.
+The first thing you'd try is to rearrange eq (16) for $A$, treat the rearrangement as a map $T(A)$, and iterate. **It diverges.** $T$'s Jacobian has spectral radius greater than 1 for any $\sigma > 1$, so equilibria are locally repelling. The contraction theory and the explicit spectral-radius derivation are in [`../slides/03_numerical_methods.pdf`](../slides/03_numerical_methods.pdf).
 
-Linearize $T$ in $\log A$. The Jacobian $J$ has the all-ones vector $\mathbf{1}$ as an eigenvector with eigenvalue
-
-$$ \lambda_1 \;=\; -\frac{3\sigma - 1}{\sigma - 1}. $$
-
-For $\sigma > 1$, $|\lambda_1| > 1$ — always. (At the default $\sigma = 5$, $|\lambda_1| = 3.5$.) So equilibria are *locally repelling* under $T$, and the iteration explodes — with sign-flipping, since $\lambda_1 < 0$.
-
-Read RRH carefully: they cite a contraction result from Allen & Arkolakis (2014) and Fujimoto & Krause (1985), but it's a contraction for the **forward** problem of solving for $L$ given $A, H$. The inverse problem we're doing here is a different map; the contraction result doesn't transfer.
+RRH do cite a contraction result, but it's for the *forward* problem (solve for $L$ given $A, H$, when $\gamma_2/\gamma_1 \in (0,1)$). The inverse problem is a different map; that result doesn't transfer.
 
 The script ships this as a demo behind a flag (`RUN_ITERATION_DEMO`, default `false`). Flip it to `true` and you'll see 50 lines of $\|\Delta A\|^2$ blowing up.
 
@@ -49,7 +43,7 @@ I tried four solvers from `NonlinearSolve.jl` on the same problem:
 | `NewtonRaphson(autodiff=AutoForwardDiff())` | `:Unstable` | $\sim 10^{3}$ |
 | `Broyden(autodiff=AutoForwardDiff())` | `:Unstable` | $\sim 10^{1}$ |
 
-The script defaults to `TrustRegion`. The trust-region globalization adapts each step's length based on actual-vs-predicted reduction, which is what saves you when the pure quadratic model is misleading.
+The script defaults to `TrustRegion`. Trust-region globalization adapts each step's length based on actual-vs-predicted reduction, which is what saves you when the pure quadratic model is misleading. Deck 03 ([`../slides/03_numerical_methods.pdf`](../slides/03_numerical_methods.pdf)) covers the broader theory of solvers and globalization strategies.
 
 (Embarrassing footnote: my first version of this script just ran `NewtonRaphson()` and used the result without checking `sol.retcode`. The heatmaps looked plausible because the input data was random — random in, random out. Adding `@assert sol.retcode == ReturnCode.Success` and an `@show maximum(abs, eq16(A, p))` is what finally surfaced this.)
 
