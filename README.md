@@ -4,7 +4,7 @@ Materials from a graduate spatial-economics course at the University of Chicago 
 
 ## Slides
 
-A series of five decks. They walk from the basic model-inversion problem up through the frontier methods for solving high-dimensional heterogeneous-agent dynamics.
+A series of five decks I prepared, walking from the basic model-inversion problem up through the frontier methods for solving high-dimensional heterogeneous-agent dynamics.
 
 | # | Deck | Topic |
 |---|---|---|
