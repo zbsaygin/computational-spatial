@@ -63,7 +63,6 @@ julia --project=. redding_rossihansberg_2017_inversion.jl
 
 - `figures/inversion/A_grid.png`, `figures/inversion/H_grid.png` — recovered productivity and housing supply
 - `figures/data/L_grid.png`, `figures/data/w_grid.png` — input population and wages
-- A residual diagnostic line on stdout (should print $\sim 10^{-14}$)
 
 ## Default parameters
 
