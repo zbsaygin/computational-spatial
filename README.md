@@ -12,7 +12,7 @@ A series of five decks. They walk from the basic model-inversion problem up thro
 | 02 | [Counterfactuals](./slides/02_counterfactuals.pdf) | Caliendo, Parro, Rossi-Hansberg & Sarte (2018) — multi-region, multi-sector trade and migration via Eaton–Kortum (2002) Fréchet productivity. Hat algebra in the changes. |
 | 03 | [Numerical Methods](./slides/03_numerical_methods.pdf) | Solvers (Newton–Raphson, Broyden, Levenberg–Marquardt, Nelder–Mead), fixed-point theory (Banach, Perov, Blackwell), Anderson acceleration, dampening, Walrasian tâtonnement, shooting and BVP methods. |
 | 04 | [Dynamic Spatial Models](./slides/04_dynamic_models.pdf) | Caliendo, Dvorkin & Parro (2019) — dynamic discrete choice for migration with forward-looking workers; dynamic hat algebra; the China-shock counterfactual. |
-| 05 | [Master Equation and FAME](./slides/05_master_equation.pdf) | Bilal (2023) and Bilal & Rossi-Hansberg (2023). Fréchet derivatives and adjoints, the master equation, the First-order Approximation to the Master Equation (FAME), and an application to a workers + capitalists + capital + climate model. |
+| 05 | [Master Equation and FAME](./slides/05_master_equation.pdf) | Bilal (2023) and Bilal & Rossi-Hansberg (2023). Fréchet derivatives and adjoints, the master equation, the First-order Approximation to the Master Equation (FAME), and an application to a spatial model. |
 
 ## Code
 
