@@ -19,7 +19,6 @@ A series of five decks, intended to be read in order. They walk from the basic m
 | Folder | Companion deck | What it does |
 |---|---|---|
 | [`rrh2017_inversion/`](./rrh2017_inversion) | 01 | Solves equations (16)–(17) of RRH (2017) for productivity $A$ and housing supply $H$ using `NonlinearSolve.jl`. Includes a derivation of why naive iteration on equation (16) diverges — spectral-radius argument, $\lambda_1 = -(3\sigma-1)/(\sigma-1) > 1$ — and which solvers actually converge. |
-| _(planned)_ `dfs_1977/` | — | Dornbusch–Fischer–Samuelson (1977) Ricardian trade with a continuum of goods. |
 
 Each code subfolder ships with its own pinned environment:
 
