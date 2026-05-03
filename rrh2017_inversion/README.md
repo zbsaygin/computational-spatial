@@ -75,7 +75,7 @@ julia --project=. redding_rossihansberg_2017_inversion.jl
 | $\bar W$ | 1.0 | Reservation utility (numeraire) |
 | $T$ | 15 | Grid side; $T^2 = 225$ locations |
 
-To override, edit the keyword args to `build_params(...)`. Note that RRH show the inversion is unique (up to normalization) only when $\sigma(1 - \alpha) > 1$. The defaults give $\sigma(1 - \alpha) = 1.25$ — fine, with a bit of room.
+To override, edit the keyword args to `build_params(...)`. Note that RRH show the inversion is unique (up to normalization) only when $\sigma(1 - \alpha) > 1$. The defaults give $\sigma(1 - \alpha) = 1.25$.
 
 ## A note on the data
 
