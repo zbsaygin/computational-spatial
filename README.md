@@ -1,4 +1,4 @@
-# quant_econ_algorithms
+# Computational Spatial Economics
 
 Slides and code from a graduate spatial-economics course at the University of Chicago (2025–2026), where I TA'd. The slides cover the modern quantitative-spatial-economics workflow end to end. The code implements the algorithms from the early decks in Julia — more will follow as I find time.
 
@@ -18,13 +18,13 @@ A series of five decks, intended to be read in order. They walk from the basic m
 
 | Folder | Companion deck | What it does |
 |---|---|---|
-| [`qse_inversion/`](./qse_inversion) | 01 | Solves equations (16)–(17) of RRH (2017) for productivity $A$ and housing supply $H$ using `NonlinearSolve.jl`. Includes a derivation of why naive iteration on equation (16) diverges — spectral-radius argument, $\lambda_1 = -(3\sigma-1)/(\sigma-1) > 1$ — and which solvers actually converge. |
+| [`rrh2017_inversion/`](./rrh2017_inversion) | 01 | Solves equations (16)–(17) of RRH (2017) for productivity $A$ and housing supply $H$ using `NonlinearSolve.jl`. Includes a derivation of why naive iteration on equation (16) diverges — spectral-radius argument, $\lambda_1 = -(3\sigma-1)/(\sigma-1) > 1$ — and which solvers actually converge. |
 | _(planned)_ `dfs_1977/` | — | Dornbusch–Fischer–Samuelson (1977) Ricardian trade with a continuum of goods. |
 
 Each code subfolder ships with its own pinned environment:
 
 ```bash
-cd qse_inversion
+cd rrh2017_inversion
 julia --project=. redding_rossihansberg_2017_inversion.jl
 ```
 
