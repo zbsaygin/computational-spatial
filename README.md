@@ -1,6 +1,6 @@
 # Computational Spatial Economics
 
-Slides and code from a graduate spatial-economics course at the University of Chicago (2025–2026), where I TA'd. The slides cover the modern quantitative-spatial-economics workflow end to end. The code implements the algorithms from the early decks in Julia — more will follow as I find time.
+Materials from a graduate spatial-economics course at the University of Chicago (2025–2026), where I served as a teaching assistant. The slides cover the canonical quantitative-spatial-economics workflow end to end. The Julia code here accompanies the first deck; for the remaining decks I used the authors' published replication packages instead.
 
 ## Slides
 
