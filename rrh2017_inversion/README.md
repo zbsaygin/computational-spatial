@@ -20,7 +20,7 @@ Pick the numeraire $\xi = 1$ and solve for $H$ — that gives a closed form $H =
 
 That's the system the script solves with `NonlinearSolve.jl`. I work in log-coordinates $x = \log A$, which keeps $A > 0$ for free without needing constrained optimization.
 
-## Gotcha 1: you can't solve eq (16) by iteration
+## Attempt 1: fixed-point iteration
 
 The first thing you'd try is to rearrange eq (16) for $A$, treat the rearrangement as a map $T(A)$, and just iterate. **It diverges.** And it's not a fluke — there's a clean reason.
 
@@ -34,7 +34,7 @@ Read RRH carefully: they cite a contraction result from Allen & Arkolakis (2014)
 
 The script ships this as a demo behind a flag (`RUN_ITERATION_DEMO`, default `false`). Flip it to `true` and you'll see 50 lines of $\|\Delta A\|^2$ blowing up.
 
-## Gotcha 2: pure Newton isn't robust either
+## Attempt 2: pure Newton
 
 So switch to Newton — it has quadratic convergence near a root and doesn't care about contraction properties. Done, right?
 
