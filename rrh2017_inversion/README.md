@@ -53,12 +53,6 @@ The script defaults to `TrustRegion`. The trust-region globalization adapts each
 
 (Embarrassing footnote: my first version of this script just ran `NewtonRaphson()` and used the result without checking `sol.retcode`. The heatmaps looked plausible because the input data was random — random in, random out. Adding `@assert sol.retcode == ReturnCode.Success` and an `@show maximum(abs, eq16(A, p))` is what finally surfaced this.)
 
-## Running
-
-```bash
-julia --project=. redding_rossihansberg_2017_inversion.jl
-```
-
 ## Outputs
 
 - `figures/inversion/A_grid.png`, `figures/inversion/H_grid.png` — recovered productivity and housing supply
