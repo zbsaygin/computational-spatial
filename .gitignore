@@ -16,3 +16,7 @@ deps/build.log
 *.bbl
 *.blg
 *.out
+
+# Override the global ~/.gitignore_global rule that excludes *.pdf —
+# slide deliverables in slides/ should be committed.
+!slides/*.pdf
